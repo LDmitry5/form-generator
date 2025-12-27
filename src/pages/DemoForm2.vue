@@ -106,6 +106,7 @@ export default defineComponent({
 
 .theme-options {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   margin-top: 10px;
 

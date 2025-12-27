@@ -82,7 +82,15 @@ export default defineComponent({
         v-bind="field.attrs"></textarea>
 
       <!-- Кастомизация через слоты -->
-      <slot :name="field.name" :field="field" :value="formData[field.name]"></slot>
+      <slot
+        :name="field.name"
+        :field="field"
+        :value="formData[field.name]"
+        :updateValue="
+          (newValue: unknown) => {
+            formData[field.name] = newValue;
+          }
+        "></slot>
     </div>
 
     <div class="form-actions">
