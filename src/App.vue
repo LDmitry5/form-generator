@@ -24,11 +24,19 @@ export default defineComponent({
   color: #2c3e50;
 }
 nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
   padding: 1rem;
   background: #f0f0f0;
+  width: 100%;
+
+  @media (max-width: 480px) {
+    gap: 1rem;
+  }
 }
 nav a {
-  margin-right: 1rem;
   text-decoration: none;
   color: #333;
 }

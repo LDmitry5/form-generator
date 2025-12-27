@@ -19,7 +19,11 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .home {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 1rem 0;
 }
 
 .btn {
@@ -27,7 +31,11 @@ export default defineComponent({
   padding: 12px 24px;
   text-decoration: none;
   border-radius: 6px;
-  font-weight: bold;
+
+  @media (max-width: 480px) {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 
   &-primary {
     background-color: #007bff;
